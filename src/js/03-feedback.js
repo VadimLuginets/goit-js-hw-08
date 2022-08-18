@@ -9,8 +9,10 @@ const parsedFormDataObject = JSON.parse(savedFormDataObject);
 
 console.log(parsedFormDataObject);
 
-formEl.email.value = parsedFormDataObject.email;
-formEl.message.value = parsedFormDataObject.message;
+if (parsedFormDataObject) {
+  formEl.email.value = parsedFormDataObject.email;
+  formEl.message.value = parsedFormDataObject.message;
+}
 
 formEl.addEventListener(
   'input',
